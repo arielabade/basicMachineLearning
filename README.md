@@ -35,12 +35,23 @@ Node (a data structure that keep informations of):
   Frontier approach: how to go to the initial state to goal state?
 
   - Start with a frontier that contains the initial state.
+  - Star with an empty explored set.
   - Put it on repeat:
       - If the frontier is empty, no solution.
       - Remove a node from the frontier.
       - If node containns goal state, return the solution.
-      - Expand the node, considering possible actions that drives you to the goal state.
-    
+      - Add the node to the explored sett.
+      - Expand the node, considering possible actions that drives you to the goal state, adding result nodes to tthe frontier if they are not in the frontier yet.
+
+    OBS: this avoid to going back and forth between nodes.
+
+- ** How to keep the solution process to initial state to goal state **    
+
+-**Stack:** pile up the solution in a stack data structure, with de last in first out using the frontier solution logic.
+
+-**Breadth-first search:** always expand the shallowest node in the frontier.
+
+-**Queue:** first-in first-out datatype. We add frontiers following this logic.
 
 ## Knowlodge
 
